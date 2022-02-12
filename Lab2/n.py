@@ -5,11 +5,12 @@ while True:
     if a == 0:
         break
 ar.pop(len(ar) - 1)
-ans = []
-while len(ar) != 0:
-    ans.append(ar[0] + ar[len(ar) - 1])
-    ar.pop(0)
-    ar.pop(len(ar) - 1)
-
-print(*ans)
-#но не выводит если нечетные
+pl = len(ar) // 2
+for i in range(len(ar) // 2):
+    if (len(ar) // 2) + (len(ar) // 2) == len(ar): #проверить если четное
+        print(ar[i] + ar[len(ar) - 1 - i], end=' ')
+    elif (len(ar) // 2) + (len(ar) // 2) != len(ar): #проверить если нечетное
+        res = [a + b for a, b in zip(ar[:pl], reversed(ar[pl:]))]
+        res.append(ar[pl])
+        print(*res)
+        break
