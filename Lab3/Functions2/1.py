@@ -85,7 +85,7 @@ def imdb_5_5(movie):
 
 
 n = int(input())  # номер фильма по индексу (всего 15 фильмов и 14 индексов)
-ans = imdb_5_5(movies[n]),  # проверит его рейтинг
+ans = imdb_5_5(movies[n])  # проверит его рейтинг
 if (ans) == True:
     print('True')
 else:
