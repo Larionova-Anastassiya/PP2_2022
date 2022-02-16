@@ -80,9 +80,9 @@ movies = [
 # Write a function that returns a sublist of movies with an IMDB score above 5.5.
 
 def list_movies(movies):
-    list = [];
+    list = []
     for i in range(len(movies)):
-        movie = movies[i];
+        movie = movies[i]
         if movie['imdb'] > 5.5:
             list.append(movie)
     return list
