@@ -4,7 +4,7 @@ def counter(num, name):
         a = int(input())
         if a == number:
             c += 1
-            print (f'Good job, {name}! You guessed my number in {c} guesses!" ')
+            print (f'Good job, {name}! You guessed my number in {c} guesses! ')
             exit()
         if a < number:
             c += 1
