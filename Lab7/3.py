@@ -8,7 +8,7 @@ RED = (255,0,0)
 
 size = weight, hight = 690, 690
 screen = pygame.display.set_mode(size) #окно по нашему размеру
-pygame.display.set_caption('Rectangle') #название окна
+pygame.display.set_caption('Ellipse') #название окна
 clock = pygame.time.Clock()
 
 color = RED
@@ -39,7 +39,7 @@ while not done:
                 x -= dx
                 y -= dy
 
-            pygame.draw.rect(screen, color, [x, y, 50, 50]) #рисунок круга
+            pygame.draw.ellipse(screen, color, [x, y, 50, 50]) #рисунок круга
 
         if key[pygame.K_s]: #перемещение вниз
             dx, dy = 0, 20
@@ -51,7 +51,7 @@ while not done:
                 x -= dx
                 y -= dy
 
-            pygame.draw.rect(screen, color, [x, y, 50, 50]) #рисунок круга
+            pygame.draw.ellipse(screen, color, [x, y, 50, 50]) #рисунок круга
 
         if key[pygame.K_a]: #перемещение влево
             dx, dy = -20, 0
@@ -63,7 +63,7 @@ while not done:
                 x -= dx
                 y -= dy
 
-            pygame.draw.rect(screen, color, [x, y, 50, 50]) #рисунок круга
+            pygame.draw.ellipse(screen, color, [x, y, 50, 50]) #рисунок круга
 
         if key[pygame.K_d]: #перемещение вправо
 
@@ -76,13 +76,13 @@ while not done:
                 x -= dx
                 y -= dy
 
-            pygame.draw.rect(screen, color, [x, y, 50, 50]) #рисунок круга
+            pygame.draw.ellipse(screen, color, [x, y, 50, 50]) #рисунок круга
 
 
 
     # показ на экране
     screen.fill(WHITE)
-    pygame.draw.rect(screen, color, [x, y, 50,50]) #рисунок круга
+    pygame.draw.ellipse(screen, color, [x, y, 50,50]) #рисунок круга
     clock.tick(60)
     pygame.display.update()
 pygame.quit()
