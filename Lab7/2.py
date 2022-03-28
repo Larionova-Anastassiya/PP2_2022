@@ -41,14 +41,14 @@ while not done:
             screen.blit(player, (0, 300))  # вставить картинку с игрой музыки
             pygame.mixer.music.play()
 
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_LEFT: #следующая музыка
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_LEFT: #прошлая музыка
             cnt -= 1
             if cnt < 0:
                 cnt = len(song) - 1
             pygame.mixer.music.load(song[cnt])
             pygame.mixer.music.play()
 
-        if event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT: #прошлая музыка
+        if event.type == pygame.KEYDOWN and event.key == pygame.K_RIGHT: #следующая музыка
             cnt += 1
             if cnt > len(song) - 1:
                 cnt = 0
